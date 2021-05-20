@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MarketController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="868.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-68.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="246.0" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" text="Chocolate" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text=" Market" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0" stylesheets="@../values/style.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField prefHeight="40.0" prefWidth="245.0" promptText="Type here to search:" styleClass="transparent" stylesheets="@../values/style.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="82.0" styleClass="search-button" stylesheets="@../values/style.css" text="Search" textFill="RED">
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="66.0" prefWidth="322.0" VBox.vgrow="ALWAYS" />
+                  <VBox fx:id="ChosenChocolateCard" alignment="CENTER" prefHeight="431.0" prefWidth="335.0" styleClass="chosen-fruit-card" stylesheets="@../values/style.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="43.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="ChocolateNameLabel" prefHeight="46.0" prefWidth="158.0" text="Snickers" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ChocolatePieceLabel" prefHeight="46.0" prefWidth="158.0" text="45 coм" textFill="WHITE">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ImageView fx:id="ChocolateImg" fitHeight="170.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/snickers.jpg" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="158.0" text="Piece" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="30.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="30.0" prefWidth="150.0" promptText="1" styleClass="comboBox" stylesheets="@../values/style.css" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" prefHeight="19.0" prefWidth="106.0" styleClass="add-btn" stylesheets="@../values/style.css" text="add to cart" textFill="#e500ff">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Cambria" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="600.0" prefWidth="582.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="58.0" prefWidth="542.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label alignment="CENTER" text="Language" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text="English" textFill="#878787" underline="true">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Pane prefHeight="100.0" prefWidth="274.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="82.0" prefWidth="582.0">
+                     <children>
+                        <HBox prefHeight="82.0" prefWidth="514.0">
+                           <children>
+                              <VBox prefHeight="82.0" prefWidth="251.0" styleClass="free-delivery-card" stylesheets="@../values/style.css">
+                                 <children>
+                                    <ImageView fitHeight="74.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8_shop_local_32px_1.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="150.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="22.0" prefWidth="143.0" text="Free delivery " textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="-50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="22.0" prefWidth="126.0" text="Over 1500 cом" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <VBox prefHeight="82.0" prefWidth="0.0" styleClass="Shopping-online-card" stylesheets="@../values/style.css">
+                                 <children>
+                                    <ImageView fitHeight="74.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8_time_50px.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="150.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="22.0" prefWidth="143.0" text="Shopping online" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="-50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="146.0" text="24/7" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="scrol" prefHeight="300.0" prefWidth="450.0" styleClass="transparent" stylesheets="@../values/style.css">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
